@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import './style.css'
+import Home from "./components/Home"
+import Main from "./components/Main"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const [formData, setFormData] = React.useState(null)
+    console.log("loading")
+
+    return (
+        <main>
+            {formData !== null ? <Main formData={formData} /> : <Home setFormData={setFormData} />}
+            <h1 className="logo home-title" onClick={() => setFormData(null)}>
+                <span>Quiz</span>Generator
+            </h1>
+            <div className="decoration">
+                <img src="./images/blob-blue.png" alt="" className="blob-blue"></img>
+                <img src="./images/blob-yellow.png" alt="" className="blob-yellow"></img>
+            </div>
+
+        </main >
+    )
 }
 
-export default App;
+
+
+// Home -> quizlist
+// create from quizlist -> quiz, if quizlist submit state newquiz to true
