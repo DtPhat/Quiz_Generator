@@ -24,11 +24,13 @@ export default function (props) {
         //console.log(selectedAnswers[index])
         return (<Quiz
             key={nanoid()}
+            showResult={correctAnswerCounter >= 0}
             quizPos={index}
             handleAnswerSelection={handleAnswerSelection}
             question={quizItem.question}
             answerList={quizItem.answerList}
             selectedPos={selectedAnswers[index]}
+            correctPos={quizItem.correctPos}
         />)
     })
 
@@ -37,16 +39,16 @@ export default function (props) {
         const countingArr = selectedAnswers.filter((answer, i) => answer === props.quizList[i].correctPos)
         setcorrectAnswerCounter(countingArr.length)
     }
-    const resultElement = (correctAnswerCounter >= 0) && props.quizList.map((quizItem, index) => {
-        return (<Result
-            key={nanoid()} 
-            quizPos={index}
-            question={quizItem.question}
-            answerList={quizItem.answerList}
-            selectedPos={selectedAnswers[index]}
-            correctPos={quizItem.correctPos}
-        />)
-    })
+    // const resultElement = (correctAnswerCounter >= 0) && props.quizList.map((quizItem, index) => {
+    //     return (<Result
+    //         key={nanoid()}
+    //         quizPos={index}
+    //         question={quizItem.question}
+    //         answerList={quizItem.answerList}
+    //         selectedPos={selectedAnswers[index]}
+    //         correctPos={quizItem.correctPos}
+    //     />)
+    // })
 
 
     function handleQuizData() {
@@ -56,14 +58,13 @@ export default function (props) {
     }
     return (
         <div className="quizList">
+            {quizElement}
             {correctAnswerCounter >= 0 ?
                 <div>
-                    {resultElement}
                     <span className="result-text">You scored {correctAnswerCounter} / {props.quizList.length} correct answer{correctAnswerCounter > 1 ? "s" : ""}. </span>
                     <button className="quizAgain-button" onClick={handleQuizData}>Play Again</button>
                 </div>
                 : <div>
-                    {quizElement}
                     <button className="submit-button" onClick={handleSubmission}>Check answer</button>
                 </div>
             }

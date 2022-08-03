@@ -25,7 +25,7 @@ body {
 
 .logo{
   font-size: 1em;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 1%;
   cursor: pointer;
