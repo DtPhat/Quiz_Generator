@@ -75,7 +75,7 @@ export default function ({ setFormData }) {
             <h1 className="home-title"><span>Quiz</span>Generator</h1>
             <p className="home-description">All of the used data is fetched from <a href="https://opentdb.com" target="_blank">https://opentdb.com/</a></p>
             {formElement}
-            <a href="https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1" target="_blank"><img src="./images/blue-creep.jpg" alt="" className="info-avatar"></img></a>
+            <a href="https://github.com/DtPhat/Quiz_Generator" target="_blank"><img src="./images/blue-creep.jpg" alt="" className="info-avatar"></img></a>
         </div>
 
     )

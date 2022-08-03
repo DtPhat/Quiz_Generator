@@ -1,13 +1,11 @@
 import React from "react";
 import Quiz from "./Quiz.js"
 import { nanoid } from "nanoid"
-import Result from "./Result.js";
 export default function (props) {
-    // const [answerSelection, setAnswerSelection] = React.useState([null, null, null, null, null])
     const [correctAnswerCounter, setcorrectAnswerCounter] = React.useState(-1)
     const [selectedAnswers, setSelectedAnswers] = React.useState(genDefaultAnsersArr())
     function genDefaultAnsersArr() {
-        const defaultAnswersArr = new Array(5)
+        const defaultAnswersArr = new Array(props.quizList.length)
         defaultAnswersArr.fill(-1)
         return defaultAnswersArr
     }
@@ -21,7 +19,6 @@ export default function (props) {
     console.log(selectedAnswers)
 
     const quizElement = props.quizList.map((quizItem, index) => {
-        //console.log(selectedAnswers[index])
         return (<Quiz
             key={nanoid()}
             showResult={correctAnswerCounter >= 0}
@@ -39,16 +36,6 @@ export default function (props) {
         const countingArr = selectedAnswers.filter((answer, i) => answer === props.quizList[i].correctPos)
         setcorrectAnswerCounter(countingArr.length)
     }
-    // const resultElement = (correctAnswerCounter >= 0) && props.quizList.map((quizItem, index) => {
-    //     return (<Result
-    //         key={nanoid()}
-    //         quizPos={index}
-    //         question={quizItem.question}
-    //         answerList={quizItem.answerList}
-    //         selectedPos={selectedAnswers[index]}
-    //         correctPos={quizItem.correctPos}
-    //     />)
-    // })
 
 
     function handleQuizData() {
@@ -73,4 +60,3 @@ export default function (props) {
 }
 
 
-// pass funciton that have state to quiz

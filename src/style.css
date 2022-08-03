@@ -15,7 +15,6 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 100%;
 }
 
 .home-title {
@@ -23,7 +22,7 @@ body {
   color: rgb(30, 172, 125);
 }
 
-.logo{
+.logo {
   font-size: 1em;
   position: absolute;
   top: 0;
@@ -91,13 +90,13 @@ label {
   background-color: #def8e4;
 }
 
-select:hover{
+select:hover {
   background-color: transparent;
 }
-  
-/* select:focus > option:checked { 
-  pointer-events: none;
-} */
+
+option:checked {
+  background-color: #afdfba;
+}
 
 .home-button {
   margin-top: 5%;
@@ -113,8 +112,6 @@ select:hover{
   background-color: #00cc66;
   cursor: pointer;
 }
-
-
 
 .blob-blue {
   position: fixed;
@@ -134,9 +131,9 @@ select:hover{
 
 .info-avatar {
   position: absolute;
-  bottom: 0%;
-  right: 2%;
-  width: 10%;
+  top: 10%;
+  left: 2%;
+  width: 8%;
   border-radius: 30px;
   cursor: pointer;
 }
@@ -153,8 +150,6 @@ hr {
   margin-left: 150px;
   margin-top: 80px;
 }
-
-
 
 .question {
   color: darkgreen;

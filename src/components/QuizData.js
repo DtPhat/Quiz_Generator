@@ -24,10 +24,3 @@ export default function (props) {
         />
     )
 }
-
-
-
-
-//App -> Main (fetch and againChild) -> QuizList(arrayData and answerArrayElement), Submit -> Quiz,
-
-// use useState to store 
