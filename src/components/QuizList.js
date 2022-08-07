@@ -9,14 +9,12 @@ export default function (props) {
         defaultAnswersArr.fill(-1)
         return defaultAnswersArr
     }
-    console.log(correctAnswerCounter)
     function handleAnswerSelection(selectedPos, index) {
         const newArray = selectedAnswers.slice()
         newArray.splice(index, 1, selectedPos)
         setSelectedAnswers(newArray)
     }
 
-    console.log(selectedAnswers)
 
     const quizElement = props.quizList.map((quizItem, index) => {
         return (<Quiz

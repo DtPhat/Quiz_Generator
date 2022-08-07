@@ -8,7 +8,6 @@ export default function (props) {
         }${formData.trivia_category ? "&category=" + formData.trivia_category : ""
         }${formData.trivia_difficulty ? "&difficulty=" + formData.trivia_difficulty : ""
         }${formData.trivia_type ? "&type=" + formData.trivia_type : ""}`
-    console.log(url)
     React.useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -23,6 +22,10 @@ export default function (props) {
         : null
     return (
         <div>
+            <div className="quiz-info" data-hover={`Amount: ${formData.trivia_amount}
+            Category: ${formData.trivia_category ? formData.trivia_category : "any category"} 
+            Difficulty: ${formData.trivia_difficulty ? formData.trivia_difficulty : "any difficulty"} 
+            Type: ${formData.trivia_type ? formData.trivia_type : "any type"}`}>?</div>
             {mainContent}
         </div>
     )
