@@ -18,11 +18,18 @@ body {
 }
 
 .home-title {
-  font-size: 3em;
+  font-size: 2.4em;
   color: rgb(30, 172, 125);
+  padding-top: 1%;
+}
+
+.home-title span {
+  color: rgb(13, 133, 93);
+  font-size: 1.4em;
 }
 
 .logo {
+  padding: 0;
   font-size: 1em;
   position: absolute;
   top: 0;
@@ -31,13 +38,16 @@ body {
 }
 
 
-.home-title span {
-  color: rgb(13, 133, 93);
-  font-size: 1.4em;
-}
+
 
 .home-description a {
-  color: #293264
+  color: darkgreen;
+}
+
+.home-description {
+  margin-top: -20px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .fromData {
@@ -80,10 +90,6 @@ label {
   margin-bottom: 10px;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.home-description {
-  margin-top: -20px;
 }
 
 .increment:hover {
@@ -160,7 +166,7 @@ option:checked {
   padding: 10px;
   width: 250px;
   max-width: 500px;
-  background-color: #94D7A2;
+  background-color: #00cc66;
   color: #fff;
   text-align:center;
   border-radius: 5px;
@@ -231,7 +237,7 @@ hr {
 }
 
 .submit-button {
-  width: 500px;
+  width: 50%;
   padding: 10px 0px;
   font-size: 30px;
   border-radius: 10px;
@@ -240,7 +246,7 @@ hr {
   border: solid 3px darkgreen;
   background-color: #00cc66;
   cursor: pointer;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 
 .result-text {
