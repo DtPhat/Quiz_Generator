@@ -1,8 +1,8 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://dtphat.github.io",
+  "private": true,
+  "homepage": "https://dtphat.github.io/Quiz_Generator",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
