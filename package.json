@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://dtphat.github.io",
   "dependencies": {
     "-": "^0.0.1",
