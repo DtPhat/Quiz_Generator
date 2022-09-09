@@ -21,6 +21,7 @@ export default function (props) {
         <QuizList
             quizList={quizArray}
             setQuizAgain={props.setQuizAgain}
+            setLoading={props.setLoading}
         />
     )
 }

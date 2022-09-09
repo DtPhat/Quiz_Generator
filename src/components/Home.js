@@ -76,7 +76,11 @@ export default function ({ setFormData }) {
             <h1 className="home-title"><span>Quiz</span>Generator</h1>
             <p className="home-description">All of the used data is fetched from <a href="https://opentdb.com" target="_blank">https://opentdb.com</a></p>
             {formElement}
-            <a href="https://github.com/DtPhat/Quiz_Generator" target="_blank"><img src="./images/blue-creep.jpg" alt="" className="info-avatar"></img></a>
+            <a href="https://github.com/DtPhat/Quiz_Generator" target="_blank"><img src={process.env.PUBLIC_URL+ "/images/blue-creep.jpg"} alt="" className="info-avatar"></img></a>
+            <div className="decoration">
+                <img src={process.env.PUBLIC_URL + "/images/blob-blue.png"} alt="" className="blob-blue"></img>
+                <img src={process.env.PUBLIC_URL + "/images/blob-yellow.png"} alt="" className="blob-yellow"></img>
+            </div>
         </div>
 
     )

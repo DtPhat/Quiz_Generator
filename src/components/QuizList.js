@@ -4,11 +4,13 @@ import { nanoid } from "nanoid"
 export default function (props) {
     const [correctAnswerCounter, setcorrectAnswerCounter] = React.useState(-1)
     const [selectedAnswers, setSelectedAnswers] = React.useState(genDefaultAnsersArr())
+
     function genDefaultAnsersArr() {
         const defaultAnswersArr = new Array(props.quizList.length)
         defaultAnswersArr.fill(-1)
         return defaultAnswersArr
     }
+
     function handleAnswerSelection(selectedPos, index) {
         const newArray = selectedAnswers.slice()
         newArray.splice(index, 1, selectedPos)
@@ -38,6 +40,7 @@ export default function (props) {
 
     function handleQuizData() {
         props.setQuizAgain(prevState => !prevState)
+        props.setLoading(true)
         setcorrectAnswerCounter(-1);
         setSelectedAnswers(genDefaultAnsersArr())
     }

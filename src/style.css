@@ -37,9 +37,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
 .home-description a {
   color: darkgreen;
 }
@@ -93,11 +90,15 @@ label {
 }
 
 .increment:hover {
-  background-color: #def8e4;
+  background-color: #afdfba;
+}
+
+select{
+  background-color: transparent;
 }
 
 select:hover {
-  background-color: transparent;
+  background-color: #F5F7FB;
 }
 
 option:checked {
@@ -144,6 +145,13 @@ option:checked {
   cursor: pointer;
 }
 
+.loading{
+  margin-top: 100px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em; 
+}
+
 .quiz-info{
   position: absolute;
   text-align: center;
@@ -152,7 +160,7 @@ option:checked {
   right: 4%;
   border: darkgreen 3px solid;
   border-radius: 50%;
-  background-color: #e6ffcc;
+  background-color: transparent;
   font-weight: 700;
   cursor: pointer;
 }
@@ -255,7 +263,7 @@ hr {
 
 .quizAgain-button {
   width: 200px;
-  margin-left: 100px;
+  margin-left: 1%;
   font-size: 25px;
   padding: 5px 0px;
   border-radius: 10px;
